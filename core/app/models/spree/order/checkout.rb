@@ -55,7 +55,8 @@ module Spree
                   name: 'order',
                   user_id: order.user_id
                 )
-                order.save
+                order.save!
+                true
               end
 
               event :cancel do
